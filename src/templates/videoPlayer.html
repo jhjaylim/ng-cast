@@ -1,9 +1,9 @@
-<div class="video-player">
+<text ng-if="!$ctrl.video">Please wait</text><div ng-if="$ctrl.video" class="video-player">
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe ng-show="$ctrl.show" class="embed-responsive-item" src={{$ctrl.url($ctrl.video.id.videoId)}} allowFullScreen></iframe>
-  </div>
+    <iframe class="embed-responsive-item" ng-src={{$ctrl.url($ctrl.video.id.videoId)}} allowFullScreen></iframe>
+  </div> 
   <div class="video-player-details">
-    <h3>{{$ctrl.video.snippet.title}}</h3>
-    <div>{{$ctrl.video.snippet.description}}</div>
+    <h3 >{{$ctrl.video.snippet.title}}</h3>
+    <div >{{$ctrl.video.snippet.description}}</div>
   </div>
 </div>

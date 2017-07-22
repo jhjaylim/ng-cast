@@ -4,13 +4,13 @@ angular.module('video-player')
     
     this.url = urlMaker;
     this.clickHandler = function () {
-      this.select(this.video);
+      this.onClick(this.video);
     };
-    
+
   },
   bindings: {
     video: '<',
-    select: '<'
+    onClick: '<'
   },
 
   templateUrl: 'src/templates/videoListEntry.html'
