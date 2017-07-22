@@ -9,7 +9,12 @@ angular.module('video-player')
       this.selection = video;
     };
     this.selectHandler = this.select.bind(this);
+    this.search = function(data) {
+      this.videos = data;
+      this.selection = data.length > 0 ? data[0] : this.selection;
+      console.log('search from APP');
+    };
+    this.searchHandler = this.search.bind(this);
   },
   templateUrl: '/src/templates/app.html'
-  // TODO
 });
