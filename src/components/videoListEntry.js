@@ -13,5 +13,5 @@ angular.module('video-player')
     select: '<'
   },
 
-  templateUrl: '/src/templates/videoListEntry.html'
+  templateUrl: 'src/templates/videoListEntry.html'
 });

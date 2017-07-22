@@ -4,21 +4,20 @@ angular.module('video-player')
 
   controller: function(youTube) {
   
-    this.youTube = youTube;
+    this.youTube = youTube.search;
     this.clickHandler = function() {
-      this.youTube(this.query, 5, this.searcher);
+      this.youTube(this.query, this.result);
     };
     this.keyUpHandler = function() {
-      console.log("fired");
-      this.youTube(this.query, 5, this.searcher);
+      console.log('fired');
+      this.youTube(this.query, this.result);
     };
     
   },
 
   bindings: {
-    searcher: '<'
-    
+    result: '<'
   },
 
-  templateUrl: '/src/templates/search.html'
+  templateUrl: 'src/templates/search.html'
 });

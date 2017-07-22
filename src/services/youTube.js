@@ -1,7 +1,7 @@
 angular.module('video-player')
 .service('youTube', function($http) { // takes query, max, and callback(handler)
   
-  return _.debounce(function(query, max, callback) {
+  this.search = (query, callback, max = 5) => {
     $http({
       'url': 'https://www.googleapis.com/youtube/v3/search', 
       'method': 'GET',
@@ -20,6 +20,6 @@ angular.module('video-player')
       console.log('error', response);
     });
 
-  },500);
+  };
   
 });

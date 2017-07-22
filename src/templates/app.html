@@ -1,15 +1,15 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <search searcher="$ctrl.searchHandler"></search>
+      <search result="$ctrl.searchResults"></search>
     </div>
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player video="$ctrl.selection"></video-player>
+      <video-player video="$ctrl.currentVideo"></video-player>
     </div>
     <div class="col-md-5">
-      <video-list videos="$ctrl.videos" select="$ctrl.selectHandler"></video-list>
+      <video-list videos="$ctrl.videos" select="$ctrl.selectVideo"></video-list>
     </div>
   <div>
 </div>

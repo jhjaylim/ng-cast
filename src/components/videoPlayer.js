@@ -1,11 +1,14 @@
 angular.module('video-player')
 
 .component('videoPlayer', {
-  templateUrl: '/src/templates/videoPlayer.html',
+  templateUrl: 'src/templates/videoPlayer.html',
   controller: function(urlMaker) {
-    this.url = urlMaker;  
-  },
+    this.url = urlMaker;
+    
+    
+  },      
+  
   bindings: {
     video: '<',
-  },
+  }
 });
