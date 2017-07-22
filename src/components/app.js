@@ -10,9 +10,8 @@ angular.module('video-player')
     };
     this.selectHandler = this.select.bind(this);
     this.search = function(data) {
-      this.videos = data;
-      this.selection = data.length > 0 ? data[0] : this.selection;
-      console.log('search from APP');
+      this.videos=data;
+      this.selection=data[0];
     };
     this.searchHandler = this.search.bind(this);
   },

@@ -3,22 +3,21 @@ angular.module('video-player')
 .component('search', {
 
   controller: function(youTube) {
+  
     this.youTube = youTube;
     this.clickHandler = function() {
-      console.log('handler--------------', this);
-      this.youTube(this.query, 5, this.test);
+      this.youTube(this.query, 5, this.searcher);
     };
-    this.test = function(data) {
-      this.videos = data;
-      this.selection = data.length > 0 ? data[0] : this.selection;
-      console.log('search from APP');
+    this.keyUpHandler = function() {
+      console.log("fired");
+      this.youTube(this.query, 5, this.searcher);
     };
+    
   },
 
   bindings: {
-    searchHandler: '<',
-    selection: '=',
-    vidoes: '='
+    searcher: '<'
+    
   },
 
   templateUrl: '/src/templates/search.html'
