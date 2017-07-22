@@ -3,9 +3,7 @@ angular.module('video-player')
   controller: function(urlMaker) {
     this.url = urlMaker;
     this.clickHandler = function () {
-      console.log('ENTRY--------------', this);
       this.select(this.video);
-
     };
     
   },
